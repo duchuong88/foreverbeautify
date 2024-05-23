@@ -75,7 +75,7 @@ export default class SlideListCenter extends React.Component {
       };
       BookDataService.bookContact(p)
         .then(({ data }) => {
-          toast.success("Đăng ký chương trình ưu đãi thành công !", {
+          toast.success("Registered for the promotion program successfully !", {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 1000,
           });

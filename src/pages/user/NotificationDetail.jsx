@@ -275,7 +275,7 @@ export default class extends React.Component {
             </div>
             <div className="page-navbar__title">
               <span className="title">
-                Thông báo
+                Notification
                 {/* {isLoading ? "Đang tải ..." : data && data.Title} */}
               </span>
             </div>

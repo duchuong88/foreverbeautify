@@ -166,7 +166,7 @@ export default class ModalReviews extends React.Component {
           this.setState({
             isReview: false,
           });
-          toast.success("Đánh giá dịch vụ thành công !", {
+          toast.success("Evaluate the service successfully !", {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 1000,
           });

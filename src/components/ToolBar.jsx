@@ -16,7 +16,7 @@ export default class ToolBar extends React.Component {
                     <li>
                         <Link href="/news/">
                             <i className="las la-newspaper"></i>
-                            <span>Ưu đãi</span>
+                            <span>Preferential</span>
                         </Link>
                     </li>
                     <li>
@@ -28,13 +28,13 @@ export default class ToolBar extends React.Component {
                     <li>
                         <Link href="/maps/">
                             <i className="las la-map-marked-alt"></i>
-                            <span>Liên hệ</span>
+                            <span>Contact</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/users/">
                             <i className="las la-user-circle"></i>
-                            <span>Tài khoản</span>
+                            <span>Account</span>
                         </Link>
                     </li>
                 </ul>

@@ -30,7 +30,7 @@ const get = ({ success, fail }) => {
           }
           success && success(DevicesOption);
         } else {
-          fail && fail(response.error || "Lỗi không xác định");
+          fail && fail(response.error || "Unknown error");
         }
       })
       .catch((err) => {

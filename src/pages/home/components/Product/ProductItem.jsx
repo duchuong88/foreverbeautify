@@ -41,16 +41,16 @@ export default class ProductItem extends React.Component {
             {source.IsDisplayPrice !== 0 ? (
               <>
                 <span className="price">
-                  <b>₫</b>
+                  <b>sgd</b>
                   {formatPriceVietnamese(item.price)}
                 </span>
                 <span className="price-sale">
-                  <b>₫</b>
+                  <b>sgd</b>
                   {formatPriceVietnamese(item.pricesale)}
                 </span>
               </>
             ) : (
-              <span className="price">Liên hệ</span>
+              <span className="price">Contact</span>
             )}
           </div>
         </div>

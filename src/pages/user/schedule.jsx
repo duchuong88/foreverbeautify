@@ -127,7 +127,7 @@ export default class extends React.Component {
     }
     //
     if (this.$f7route.params.ID && this.state.isParams) {
-      self.$f7.dialog.preloader("Đang tải ...");
+      self.$f7.dialog.preloader("Loading ...");
       const { ID } = this.$f7route.params;
       BookDataService.getBookId(ID)
         .then(({ data }) => {

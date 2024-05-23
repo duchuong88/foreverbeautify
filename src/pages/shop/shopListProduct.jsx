@@ -403,15 +403,15 @@ export default class extends React.Component {
                                     }
                                   >
                                     {item.source.IsDisplayPrice === 0 ? (
-                                      <span className="price">Liên hệ</span>
+                                      <span className="price">Contact</span>
                                     ) : (
                                       <React.Fragment>
                                         <span className="price">
-                                          <b>₫</b>
+                                          <b>sgd</b>
                                           {formatPriceVietnamese(item.price)}
                                         </span>
                                         <span className="price-sale">
-                                          <b>₫</b>
+                                          <b>sgd</b>
                                           {formatPriceVietnamese(
                                             item.pricesale
                                           )}
@@ -471,11 +471,11 @@ export default class extends React.Component {
                                     ) : (
                                       <React.Fragment>
                                         <span className="price">
-                                          <b>₫</b>
+                                          <b>sgd</b>
                                           {formatPriceVietnamese(item.price)}
                                         </span>
                                         <span className="price-sale">
-                                          <b>₫</b>
+                                          <b>sgd</b>
                                           {formatPriceVietnamese(
                                             item.pricesale
                                           )}

@@ -62,7 +62,7 @@ export default class extends React.Component {
             </div>
             <div className="page-navbar__title">
               <span className="title">
-                {loading ? "Đang tải ..." : data?.root.Title}
+                {loading ? "Loading ..." : data?.root.Title}
               </span>
             </div>
             <div className="page-navbar__noti">

@@ -119,16 +119,16 @@ function ShopListServiceItem({ item, CateId, f7router, lines }) {
                         }
                       >
                         {subitem.IsDisplayPrice === 0 ? (
-                          <span className="price-to">Liên hệ</span>
+                          <span className="price-to">Contact</span>
                         ) : (
                           <React.Fragment>
                             <span className="price-to">
                               {formatPriceVietnamese(subitem.PriceProduct)}
-                              <b>đ</b>
+                              <b>sgd</b>
                             </span>
                             <span className="price-sale pl-8px">
                               {formatPriceVietnamese(subitem.PriceSale)}
-                              <b>đ</b>
+                              <b>sgd</b>
                             </span>
                           </React.Fragment>
                         )}
@@ -162,16 +162,16 @@ function ShopListServiceItem({ item, CateId, f7router, lines }) {
                       }
                     >
                       {subitem.IsDisplayPrice === 0 ? (
-                        <span className="price-to">Liên hệ</span>
+                        <span className="price-to">Contact</span>
                       ) : (
                         <React.Fragment>
                           <span className="price-to">
                             {formatPriceVietnamese(subitem.PriceProduct)}
-                            <b>đ</b>
+                            <b>sgd</b>
                           </span>
                           <span className="price-sale">
                             {formatPriceVietnamese(subitem.PriceSale)}
-                            <b>đ</b>
+                            <b>sgd</b>
                           </span>
                         </React.Fragment>
                       )}
@@ -186,7 +186,7 @@ function ShopListServiceItem({ item, CateId, f7router, lines }) {
           className="btn-more-service"
           onClick={() => setItemShow(itemShow + 5)}
         >
-          Xem thêm <i className="las la-angle-down"></i>
+          Details <i className="las la-angle-down"></i>
         </button>
       )}
     </div>

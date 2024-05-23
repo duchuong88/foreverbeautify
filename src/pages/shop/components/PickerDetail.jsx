@@ -52,7 +52,7 @@ function PickerDetail({ children, item }) {
             </div>
             <div className="content">
               {ReactHtmlParser(item.root.Desc)}
-              {isLoading ? "Đang tải nội dung ... " : ReactHtmlParser(fixedContentDomain(data?.Detail))}
+              {isLoading ? "Loading content ... " : ReactHtmlParser(fixedContentDomain(data?.Detail))}
             </div>
           </div>
         </PageContent>

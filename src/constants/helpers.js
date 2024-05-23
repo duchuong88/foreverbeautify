@@ -42,7 +42,7 @@ export const checkSLDisabled = (prodid) => {
   let index = SL.split(",").findIndex((x) => Number(x) === Number(prodid));
   if (index > -1) {
     result.Disabled = true;
-    result.Text = "(*) Chỉ áp dụng mua 1 SP/DV.";
+    result.Text = "(*) Only applicable for purchase of 1 product/service.";
   }
   return result;
 };
@@ -54,7 +54,7 @@ export const checkDevices = ({ Auth, deviceId }) =>
       if (Auth.DeviceIDs && Auth.DeviceIDs === deviceId) {
         resolve("");
       } else {
-        reject("Tài khoản của bạn đang đăng nhập tại thiết bị khác.");
+        reject("Your account is logged in on another device.");
       }
     } else {
       resolve("");

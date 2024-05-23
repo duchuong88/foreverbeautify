@@ -167,7 +167,7 @@ export default class extends React.Component {
     UserService.deleteNotification(data)
       .then((response) => {
         if (response.data) {
-          toast.success(" Xóa thành công !", {
+          toast.success(" Deleted successfully !", {
             position: toast.POSITION.TOP_LEFT,
             autoClose: 3000,
           });

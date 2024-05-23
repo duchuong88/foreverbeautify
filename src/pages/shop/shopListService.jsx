@@ -457,13 +457,13 @@ export default class extends React.Component {
                                           {formatPriceVietnamese(
                                             item.source.PriceProduct
                                           )}
-                                          <b>đ</b>
+                                          <b>sgd</b>
                                         </span>
                                         <span className="price-sale">
                                           {formatPriceVietnamese(
                                             item.source.PriceSale
                                           )}
-                                          <b>SGD</b>
+                                          <b>sgd</b>
                                         </span>
                                       </React.Fragment>
                                     )}

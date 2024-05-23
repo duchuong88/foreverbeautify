@@ -68,7 +68,7 @@ const RenderQR = ({ ValueBank, Total, ID, MaND }) => {
         <div className="bg-white position-absolute h-40px w-100 bg-white top-0 left-0"></div>
         <img
           src={`https://img.vietqr.io/image/${ValueBank.ma_nh}-${ValueBank.stk}-compact2.jpg?amount=${Total}&addInfo=${MaND}${ID}&accountName=${ValueBank.ten}`}
-          alt="Mã QR Thanh toán"
+          alt="Payment QR Code"
         />
       </div>
     </div>
@@ -127,8 +127,8 @@ const SheetOrder = ({ item, textPay, loadingText, Banks, MaND }) => {
                   options={Banks}
                   className="select-control"
                   classNamePrefix="select"
-                  placeholder="Chọn ngân hàng"
-                  noOptionsMessage={() => "Không có dữ liệu"}
+                  placeholder="Choose a bank"
+                  noOptionsMessage={() => "No data"}
                   value={ValueBank}
                   onChange={(val) => setValueBank(val)}
                   isClearable={true}
@@ -430,7 +430,7 @@ export default class extends React.Component {
                                     {formatPriceVietnamese(
                                       Math.abs(item.thanhtoan.thanh_toan_tien)
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -442,7 +442,7 @@ export default class extends React.Component {
                                     {formatPriceVietnamese(
                                       Math.abs(item.thanhtoan.thanh_toan_vi)
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -454,7 +454,7 @@ export default class extends React.Component {
                                     {formatPriceVietnamese(
                                       Math.abs(item.thanhtoan.hoan_vi_tra_hang)
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -468,7 +468,7 @@ export default class extends React.Component {
                                         item.thanhtoan.hoan_vi_ket_thuc_the
                                       )
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -482,7 +482,7 @@ export default class extends React.Component {
                                         item.thanhtoan.ket_thuc_the_hoan_tien
                                       )
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -496,7 +496,7 @@ export default class extends React.Component {
                                         item.thanhtoan.ket_thuc_the_hoan_vi
                                       )
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -522,7 +522,7 @@ export default class extends React.Component {
                                         item.thanhtoan.tra_hang_hoan_tien
                                       )
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -534,7 +534,7 @@ export default class extends React.Component {
                                     {formatPriceVietnamese(
                                       Math.abs(item.thanhtoan.tra_hang_hoan_vi)
                                     )}
-                                    <b>SGD</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )}
@@ -551,7 +551,7 @@ export default class extends React.Component {
                                   item.thanhtoan.thanh_toan_ao
                               )
                             )}
-                            <b>SGD</b>
+                            <b>sgd</b>
                           </span>
                           <div className="btn-div">
                             {Math.abs(

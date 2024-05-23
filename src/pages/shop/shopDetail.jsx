@@ -467,7 +467,7 @@ export default class extends React.Component {
             </div>
             <div className="page-navbar__title">
               <span className="title">
-                {!statusLoading ? arrProductCurrent.Title : "Đang tải ..."}
+                {!statusLoading ? arrProductCurrent.Title : "Loading ..."}
               </span>
             </div>
             <div className="page-navbar__cart">

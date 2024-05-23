@@ -108,7 +108,7 @@ function ScheduleService({
           <form onSubmit={onSumit}>
             <input
               type="text"
-              placeholder="Nhập tên dịch vụ bạn cần ?"
+              placeholder="Enter the name of the service you need ?"
               value={valueS}
               onChange={(e) => handleSearch(e.target.value)}
             />
@@ -156,8 +156,8 @@ function ScheduleService({
                           <div className="item-desc item-treat">
                             <i className="las la-tag"></i>{" "}
                             {item.OsBH > 0
-                              ? "Đang có thẻ bảo hành"
-                              : "Đang có thẻ liệu trình"}
+                              ? "Have warranty card"
+                              : "Have a treatment card"}
                           </div>
                         )}
                         {item.SaleDecs && (

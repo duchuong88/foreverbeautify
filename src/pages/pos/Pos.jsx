@@ -50,7 +50,7 @@ export default class extends React.Component {
         </Navbar>
         <div className="page-render">
           Bán hàng
-          {/* <PageNoData text="Đang cập nhập ..." /> */}
+          {/* <PageNoData text="Updating ..." /> */}
         </div>
 
         <Toolbar tabbar position="bottom">
