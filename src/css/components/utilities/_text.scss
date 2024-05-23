@@ -1,0 +1,56 @@
+@each $name,
+$size in $config-font-size {
+    // Base color
+    .font-#{$name} {
+        font-size: $size !important;
+    }
+}
+
+//
+@each $name,
+$config in $config-text {
+    // Base text
+    @include createClasses($config);
+}
+
+@each $name,
+$config in $config-line-text {
+    // Base text
+    .line-height-#{$name} {
+        line-height: $config !important;
+    }
+}
+
+//
+@each $name,
+$color in $theme-colors {
+    // Base color
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+
+.text-muted {
+    color: #A1A5B7 !important;
+}
+
+.text-svg {
+    color: #A1A5B7;
+}
+
+.text-gray-700 {
+    color: #5E6278 !important;
+}
+
+// 
+.text-truncate {
+    @include cut-text();
+}
+
+.text-truncate-2 {
+    @include cut-text-to(3);
+}
+
+.text-truncate-3 {
+    @include cut-text-to(3);
+}

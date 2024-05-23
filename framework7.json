@@ -1,0 +1,26 @@
+{
+  "cwd": "C:\\Users\\admin\\Desktop\\Framework 7\\demo1",
+  "type": [
+    "web"
+  ],
+  "name": "demo1",
+  "framework": "react",
+  "template": "single-view",
+  "cssPreProcessor": "scss",
+  "bundler": "webpack",
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}

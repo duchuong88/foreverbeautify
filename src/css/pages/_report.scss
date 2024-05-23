@@ -1,0 +1,86 @@
+.report-welcome {
+    position: relative;
+    &__top {
+        background-color: rgba(85, 110, 230, .25);
+        .img {
+            max-width: 125px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .icon {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%!important;
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #556ee6;
+        border: 3px solid #f6f6f6;
+        bottom: -35px;
+        left: 15px;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 54px;
+            background-color: hsla(0, 0%, 100%, .1);
+            left: 30px;
+            -webkit-transform: rotate(32deg);
+            transform: rotate(32deg);
+            top: 5px;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+        }
+        &::after {
+            left: -8px;
+            width: 12px;
+            transition: all 0.2s;
+            height: 60px;
+            top: -5px;
+        }
+        i {
+            font-size: 26px;
+        }
+    }
+}
+
+.line-report-1 {
+    -webkit-clip-path: polygon(0% 55%, 0% 100%, 100% 100%, 100% 41%, 90% 81%, 80% 36%, 70% 78%, 60% 27%, 50% 78%, 40% 58%, 30% 36%, 20% 45%, 10% 27%);
+    clip-path: polygon(0% 55%, 0% 100%, 100% 100%, 100% 41%, 90% 81%, 80% 36%, 70% 78%, 60% 27%, 50% 78%, 40% 58%, 30% 36%, 20% 45%, 10% 27%);
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(#c9f7f5, #c5fffc);
+}
+
+.line-report-2 {
+    -webkit-clip-path: polygon(0% 45%, 0% 100%, 100% 100%, 100% 71%, 90% 11%, 80% 46%, 70% 28%, 60% 67%, 50% 38%, 40% 28%, 30% 76%, 20% 35%, 10% 77%);
+    clip-path: polygon(0% 45%, 0% 100%, 100% 100%, 100% 71%, 90% 11%, 80% 46%, 70% 28%, 60% 67%, 50% 38%, 40% 28%, 30% 76%, 20% 35%, 10% 77%);
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(#e1f0ff, #e1f0ff);
+}
+
+.line-report-3 {
+    -webkit-clip-path: polygon(0% 65%, 0% 20%, 100% 100%, 100% 71%, 90% 11%, 80% 46%, 70% 28%, 60% 67%, 50% 38%, 40% 28%, 30% 15%, 20% 35%, 10% 77%);
+    clip-path: polygon(0% 65%, 0% 200%, 100% 100%, 100% 71%, 90% 11%, 80% 46%, 70% 28%, 60% 67%, 50% 38%, 40% 28%, 30% 15%, 20% 35%, 10% 77%);
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(#FFE2E5, #FFE2E5);
+}

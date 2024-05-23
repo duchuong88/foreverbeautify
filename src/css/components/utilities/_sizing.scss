@@ -1,0 +1,28 @@
+@each $name,
+$value in $heights-and-widths {
+    // Height
+    .w-#{$name} {
+        width: $value !important;
+    }
+    // Width
+    .h-#{$name} {
+        height: $value !important;
+    }
+    // Min width
+    .min-w-#{$name} {
+        min-width: $value !important;
+    }
+    // Min
+    .min-h-#{$name} {
+        min-height: $value !important;
+    }
+    .max-h-#{$name} {
+        max-height: $value !important;
+    }
+    .max-w-#{$name} {
+        max-width: $value !important;
+    }
+}
+.bz-bb {
+    box-sizing: border-box;
+}

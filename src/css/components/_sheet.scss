@@ -1,0 +1,94 @@
+.sheet-scroll {
+    background: transparent;
+    height: 80%;
+    &::after {
+        content: "";
+        width: 50px;
+        height: 4px;
+        background: #dbdbdb;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        z-index: 10;
+    }
+    .toolbar {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        .sheet-close {
+            font-size: 24px;
+            color: #333;
+        }
+    }
+}
+
+.sheet-filters {
+    max-height: 75vh;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    .sheet-modal-inner {
+        overflow: visible;
+    }
+    form,
+    .sheet-modal-swipe-step {
+        height: 100%;
+    }
+    .sheet-body {
+        height: calc(100% - 72px);
+        box-sizing: border-box;
+        overflow: auto;
+        padding: 15px 15px 0 15px;
+        ul {
+            li {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .item-inner {
+                    @include flex-direction(column);
+                    @include align-items(initial);
+                    .item-label {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #3f4254;
+                        margin-bottom: 2px;
+                    }
+                    .item-input-wrap {
+                        position: relative;
+                        input,
+                        select {
+                            width: 100%;
+                            display: block;
+                            border: 1px solid #e4e6ef;
+                            height: 44px;
+                            padding: .65rem 1rem;
+                            border-radius: .25rem;
+                            font-weight: 500;
+                        }
+                        .input-clear-button {
+                            right: 10px;
+                        }
+                        .item-input-error-message {
+                            margin-top: 6px;
+                            margin-bottom: 0;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sheet-footer {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .sheet-icon-close {
+        top: -35px;
+        color: #fff;
+        opacity: .9;
+        font-size: 32px;
+        right: 10px;
+    }
+}

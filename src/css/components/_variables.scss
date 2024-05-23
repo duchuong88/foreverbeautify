@@ -1,0 +1,33 @@
+//// Gray colors
+$gray-100: #F3F6F9 !default;
+$gray-200: #EBEDF3 !default;
+$gray-300: #E4E6EF !default;
+$gray-400: #D1D3E0 !default;
+$gray-500: #B5B5C3 !default;
+$gray-600: #7E8299 !default;
+$gray-700: #5E6278 !default;
+$gray-800: #3F4254 !default;
+$gray-900: #181C32 !default;
+//
+$theme-colors: ("white": #fff, "black": #000, "light": #F5F8FA, "dark": #181C32, "success": #1BC5BD, "primary": #3699FF, "primary2": #556ee6, "danger": #F64E60, "warning": #FFA800);
+// Heights & Widths
+$heights-and-widths: (100: 100%, 80: 80%, 70: 70%, 60: 60%, 50: 50%, 33: 33.333333%, 30:30%, 25:25%, 20:20%, 15:15%, 10:10%, auto: auto, 0: 0px, 1px: 1px, 2px: 2px, 3px: 3px, 4px: 4px, 5px: 5px, 6px: 6px, 8px: 8px, 10px: 10px, 12px: 12px, 15px: 15px, 20px: 20px, 25px: 25px, 30px: 30px, 32px: 32px, 35px: 35px, 40px: 40px, 42px: 42px, 45px: 45px, 48px: 48px, 50px: 50px, 55px: 55px, 60px: 60px, 65px: 65px, 70px: 70px, 75px: 75px, 80px: 80px, 85px: 85px, 90px: 90px, 95px: 95px, 100px: 100px, 105px: 105px, 110px: 110px, 115px: 115px, 120px: 120px, 125px: 125px, 130px: 130px, 135px: 135px, 140px: 140px, 145px: 145px, 150px: 150px, 155px: 155px, 160px: 160px, 165px: 165px, 176px: 170px, 175px: 175px, 180px: 180px, 200px: 200px, 225px: 225px, 235px: 235px, 250px: 250px, 255px: 255px, 260px: 260px, 265px: 265px, 275px: 275px, 295px: 295px, 300px: 300px, 325px: 325px, 350px: 350px, 375px: 375px, 400px: 400px, 425px: 425px, 450px: 450px, 475px: 475px, 500px: 500px, 550px: 550px, 600px: 600px, 650px: 650px, 700px: 700px, 750px: 750px, 800px: 800px, 850px: 850px, 900px: 900px, 950px: 950px, 1000px: 1000px, ) !default;
+// Font size text
+$config-font-size: ("size-min": 12px, "size-xs": 13px, "size-sm": 14px, "size-md": 16px, "size-lg": 22px, "size-xl": 26px);
+// Position
+$positon-and: (-1: -1px, -5: -5px, -10: -10px, 0: 0, 1px: 1px, 2px: 2px, 3px: 3px, 4px: 4px, 5px: 5px, 6px: 6px, 7px: 7px, 8px: 8px, 9px: 9px, 10px: 10px, 15px: 15px, 20px: 20px, 25px: 25px, 100: 100%) !default;
+//
+$config-text: (font-weight: ("name": "font-weight", "prefix": "fw-", "values": ("200": 200, "300": 300, "400": 400, "500": 500, "600": 600, "700": 700, )), text-transform: ("name": "text-transform", "prefix": "text-", "values": ("capitalize": "capitalize", "uppercase": "uppercase", "lowercase": "lowercase", "none": "none")), text-decoration: ("name": "text-decoration", "prefix": "text-", "values": ("underline": "underline", "line-through": "line-through", "dnone": "dnone")), font-style: ("name": "font-style", "prefix": "text-", "values": ("italic": "italic", "initial": "initial", )), text: ("name": "text-align", "prefix": "text-", "values": ("center": "center", "left": "left", "right": "right")));
+$config-font-size: ("size-min": 11px, "size-xs": 13px, "size-sm": 14px, "size-md": 16px, "size-lg": 19px, "size-xl": 22px);
+// Border
+$border-width: 1px !default;
+$border-color: $gray-100 !default;
+$border-radius: .25rem !default;
+$border-radius-xl: 1.3rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
+$rounded-pill: 50rem !default;
+// Shadow
+$shadows: 0px 10px 30px 0px rgb(82 63 105 / 8%);
+//
+$config-line-text: ("auto": initial, "xs": 16px, "sm": 20px, "md": 22px, "lg": 25px, "xl": 28px, "xxl": 35px);

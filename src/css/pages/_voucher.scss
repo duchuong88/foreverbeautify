@@ -1,0 +1,188 @@
+.page-voucher {
+    &__list {
+        padding: 15px;
+        &-item {
+            @include flexbox();
+            box-shadow: 0 3px 20px rgba(0, 0, 0, .04);
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .voucher-icon {
+                width: 100px;
+                background: -webkit-gradient(linear, left top, right top, color-stop(0, transparent), color-stop(.1875rem, transparent), color-stop(.1875rem, var(--ezs-color-voucher, $color-app)));
+                background: linear-gradient(90deg, transparent 0, transparent .1875rem, var(--ezs-color-voucher, $color-app) 0);
+                position: relative;
+                &__text {
+                    @include flexbox;
+                    @include flex-direction(column);
+                    @include align-items(center);
+                    @include justify-content(center);
+                    height: 100%;
+                    padding: 0 12px;
+                    img {
+                        filter: brightness(0) invert(1);
+                        &.no-filter {
+                            filter: none;
+                        }
+                    }
+
+                }
+                &__line {
+                    position: absolute;
+                    top: .3125rem;
+                    left: 0;
+                    width: .25rem;
+                    height: -webkit-calc(100% - .4375rem);
+                    height: calc(100% - .4375rem);
+                    background: radial-gradient(circle at 0 .25rem, transparent 0, transparent .1875rem, var(--ezs-color-voucher, $color-app) 0);
+                    background-size: .25rem .625rem;
+                    background-repeat: repeat-y;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -.3125rem;
+                        width: 100%;
+                        height: .3125rem;
+                        background: var(--ezs-color-voucher, $color-app);
+                        border-radius: .125rem 0 0 0;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -.125rem;
+                        left: 0;
+                        width: 100%;
+                        height: .125rem;
+                        background: var(--ezs-color-voucher, $color-app);
+                        border-radius: 0 0 0 .125rem;
+                    }
+                }
+            }
+            .voucher-value {
+                border: 1px solid $color-primary;
+                display: inline-block;
+                padding: 3px 6px 2px 6px;
+                font-size: 12px;
+                font-weight: 500;
+                border-radius: 3px;
+                margin-bottom: 8px;
+                color: $color-primary;
+            }
+            .voucher-text {
+                width: calc(100% - 100px);
+                padding: 10px;
+                box-sizing: border-box;
+                background: $white;
+                .title {
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                    font-family: $font-app;
+                    @include cut-text();
+                }
+                .code {
+                    font-size: 18px;
+                    color: $color-price-app;
+                    border-bottom: 1px dashed #e5e4e4;
+                    @include flexbox;
+                    @include justify-content(space-between);
+                    @include align-items(baseline);
+                    margin-bottom: 7px;
+                    padding-bottom: 2px;
+                    font-weight: 500;
+                    span {
+                        &:first-child {
+                            font-size: 14px;
+                            color: #333333;
+                        }
+                    }
+                }
+                ul {
+                    @include flexbox;
+                    @include justify-content(space-between);
+                    li {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #333333;
+                        b {
+                            color: $color-price-app;
+                        }
+                        span {
+                            &:last-child {
+                                font-weight: 600;
+                                font-size: 14px;
+                                margin-left: 4px;
+                            }
+                        }
+                        a.show-more {
+                            height: auto;
+                            line-height: 20px;
+                            margin: 0;
+                            padding: 0;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__out {
+        background: $white;
+        padding: 40px;
+        display: flex;
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+        img {
+            width: 140px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.sheet-swipe-voucher {
+    .sheet-pay-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+            b {
+                font-size: 18px;
+                color: $color-price-app;
+            }
+        }
+        .code {
+            color: $color-primary;
+            font-size: 13px;
+        }
+    }
+    .sheet-service-lst {
+        .sheet-service-lst__item {
+            .item-sub__box {
+                h5 {
+                    color: #999;
+                    font-weight: 400;
+                    font-size: 13px;
+                    margin-bottom: 2px;
+                }
+                .price {
+                    font-weight: 600;
+                }
+                .flex-share {
+                    justify-content: space-between;
+                    .code {
+                        color: $color-primary;
+                    }
+                }
+                .cates {
+                    flex-direction: column;
+                    align-items: baseline;
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

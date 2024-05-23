@@ -1,0 +1,167 @@
+.page-navbar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include flexbox;
+    @include justify-content(space-between);
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: calc(100vw - 125px);
+        text-align: center;
+        color: $white;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        padding: 0 10px;
+        .title {
+            font-size: var(--font-size-xl, $size-lg);
+            font-weight: 400;
+            @include cut-text;
+        }
+    }
+    &__back,
+    &__filter {
+        width: 40px;
+        background: $color-app;
+        height: calc(100% - 2px);
+        a.link {
+            width: 40px;
+            @include justify-content(center);
+            color: $white;
+            font-size: 22px;
+        }
+    }
+    &__noti {
+        min-width: 48px;
+        width: 40px;
+        background: $color-app;
+        height: calc(100% - 2px);
+        &.search {
+            width: auto !important;
+            min-width: 40px;
+        }
+        a {
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            color: $white;
+            font-size: 22px;
+            position: relative;
+            .count {
+                position: absolute;
+                display: inline-block;
+                padding: .25em .4em;
+                font-size: 8px;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: .25rem;
+                color: $white;
+                background-color: $color-price-app;
+                right: 10px;
+                top: 10px;
+            }
+        }
+    }
+    &__cart {
+        width: 40px;
+        background: $color-app;
+        height: calc(100% - 2px);
+        a {
+            width: 40px;
+            height: 100%;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            color: $white;
+            font-size: 22px;
+            position: relative;
+            svg {
+                fill: $white;
+                width: 22px;
+                height: 22px;
+                path {
+                    stroke: $white;
+                }
+            }
+            .count {
+                position: absolute;
+                display: inline-block;
+                padding: .25em .4em;
+                font-size: 8px;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: .25rem;
+                color: $white;
+                background-color: $color-price-app;
+                right: 5px;
+                top: 8px;
+            }
+            i {
+                font-size: 26px;
+            }
+        }
+    }
+    &__save {
+        width: 40px;
+        background: $color-app;
+        height: calc(100% - 2px);
+        a {
+            width: 40px;
+            height: 100%;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            color: $white;
+            font-size: 22px;
+            position: relative;
+        }
+    }
+}
+
+.notification--animation {
+    svg {
+        -webkit-animation: tadaNoti 1.5s ease infinite;
+        animation: tadaNoti 1.5s ease infinite;
+    }
+}
+
+@keyframes tadaNoti {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    10%,
+    20% {
+        -webkit-transform: scale3d(.95, .95, .95) rotate(-10deg);
+        transform: scale3d(.95, .95, .95) rotate(-10deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scaleX(1) rotate(10deg);
+        transform: scaleX(1) rotate(10deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}

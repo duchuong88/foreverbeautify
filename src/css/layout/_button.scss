@@ -1,0 +1,273 @@
+.btn-me {
+    position: relative;
+    &.loading {
+        pointer-events: none;
+        &:before {
+            margin: -13px 0 0 -13px;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: '';
+            -webkit-border-radius: 24px;
+            -webkit-background-clip: padding-box;
+            -moz-border-radius: 24px;
+            -moz-background-clip: padding;
+            border-radius: 24px;
+            background-clip: padding-box;
+            border: rgba(255, 255, 255, 0.25) 2px solid;
+            border-top-color: #fff;
+            -webkit-animation: animation-rotate 750ms linear infinite;
+            -moz-animation: animation-rotate 750ms linear infinite;
+            -o-animation: animation-rotate 750ms linear infinite;
+            animation: animation-rotate 750ms linear infinite;
+        }
+        span {
+            color: transparent;
+            text-shadow: none;
+        }
+    }
+}
+
+.btn-login {
+    height: 42px;
+    font-size: 14px;
+    border: 0;
+    background: $color-app;
+    border-radius: .125rem;
+    color: $white;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(126, 55, 216, 0.05);
+    box-shadow: 0px 0px 25px 0px rgba(126, 55, 216, 0.05);
+    text-transform: uppercase;
+    outline: none;
+    -webkit-box-shadow: 2px 12px 26px 3px rgba(185, 151, 71, 0.29);
+    box-shadow: 2px 6px 29px 0px rgba(185, 151, 71, 0.29);
+    font-size: var(--font-size-medium, $size-base);
+    &.btn-no-image {
+        background-image: none;
+    }
+}
+
+.btn-signout {
+    background: #f6f6f6;
+    color: #5a5a5a;
+    border: 0;
+    font-weight: bold;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-family: $font-app;
+    font-size: 15px;
+    outline: none;
+}
+
+.btn-toolbar-book {
+    width: 100%;
+    padding: 8px 0;
+    border: 0;
+    background: $color-app;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $font-app;
+    border-radius: 2px;
+    outline: none;
+}
+
+.btn-reviews {
+    background: $color-app;
+    border: 1px solid $color-app;
+    padding: 12px 0;
+    border-radius: 25px;
+    color: $white;
+    font-size: 14px;
+    outline: none;
+}
+
+.btn-submit-order {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: $color-app;
+    color: $white;
+    text-transform: uppercase;
+    outline: none;
+    font-size: var(--font-size-medium, $size-medium);
+    letter-spacing: .5px;
+    min-height: 42px;
+    &.success {
+        background: $color-success;
+    }
+    span {
+        transition: all .3s ease;
+    }
+    &.loading {
+        pointer-events: none;
+        opacity: .9;
+        .loading-icon {
+            visibility: visible;
+            opacity: 1;
+        }
+        span {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    .loading-icon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        &__item {
+            width: 15px;
+            height: 15px;
+            background: $white;
+            margin: 0 12px;
+            border-radius: 100%;
+            animation: bounce 1.5s 0.5s linear infinite;
+            &.item-2 {
+                animation-delay: 0.1s;
+            }
+            &.item-3 {
+                animation-delay: 0.2s;
+            }
+            &.item-4 {
+                animation-delay: 0.3s;
+            }
+        }
+    }
+}
+
+.btn-no-click {
+    pointer-events: none;
+    opacity: .7;
+}
+
+.btn-small {
+    position: relative;
+    &.loading {
+        pointer-events: none;
+        opacity: .7;
+        .loader {
+            opacity: 1;
+        }
+        span {
+            opacity: 0;
+        }
+    }
+    span {
+        transition: all .2s;
+    }
+    .loader {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        position: absolute;
+        left: 50%;
+        height: 16px;
+        width: 80px;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .2s ease;
+        &-item {
+            display: inline-block;
+            background-color: $white;
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: bounceBtn 0.6s infinite alternate;
+            &:nth-child(2) {
+                animation-delay: 0.2s;
+                opacity: .8;
+            }
+            &:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+        }
+    }
+}
+
+.btn-submit-step {
+    line-height: 38px;
+    margin-top: 8px;
+    width: auto;
+    padding: 0 36px;
+    font-size: 13px;
+    border-radius: 2px;
+    min-height: 38px;
+    border: 1px solid $color-app;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $color-app;
+}
+
+.btn-more-service {
+    background: transparent;
+    border: 0;
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0d5cb6;
+    text-transform: capitalize;
+    outline: none;
+}
+
+@keyframes bounceBtn {
+    to {
+        width: 12px;
+        height: 12px;
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@-webkit-keyframes animation-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes animation-rotate {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes animation-rotate {
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes animation-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    50%,
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+    }
+    25% {
+        transform: scale(0.6);
+        filter: blur(0px);
+    }
+    75% {
+        filter: blur(0px);
+        transform: scale(1.4);
+    }
+}

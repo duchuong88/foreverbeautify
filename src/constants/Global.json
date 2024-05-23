@@ -1,0 +1,43 @@
+{
+    "APP": {
+        "Name": "Cser Beauty",
+        "Version": "2.0",
+        "Firebase": {
+            "apiKey": "AIzaSyBOuJ19sg_yuRvrNZ5wo6rW8uGylsnVkws",
+            "authDomain": "cser-d0ce7.firebaseapp.com",
+            "databaseURL": "https://cser-d0ce7.firebaseio.com",
+            "projectId": "cser-d0ce7",
+            "storageBucket": "cser-d0ce7.appspot.com",
+            "messagingSenderId": "1087460686681",
+            "appId": "1:1087460686681:web:5ecbbb8bcd5596faf3aa48"
+        },
+        "Prom": {
+            "NotiMp3Push": true
+        },
+        "Home": {
+            "SliderFull": false
+        },
+        "Booking": {
+            "TimeOpen": {
+                "hour": "7",
+                "minute": "30",
+                "second": "00"
+            },
+            "TimeClose": {
+                "hour": "21",
+                "minute": "00",
+                "second": "00"
+            },
+            "TimeNext": 15,
+            "AtHome": false
+        },
+        "Prod": {
+            "IsDetailOriginal": true,
+            "AppMuaHang": 0
+        },
+        "Css": {
+            "--ezs-color": "#ff898d",
+            "--ezs-color-gradient": "#fd434a"
+        }
+    }
+}

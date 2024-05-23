@@ -1,0 +1,34 @@
+//
+// Positions
+//
+$positon-key: (top, left, right, bottom) !default;
+@each $key in $positon-key {
+    @each $name,
+    $value in $positon-and {
+        .#{$key}-#{$name} {
+            #{$key}: #{$value} !important;
+        }
+        .#{$key}--#{$name} {
+            #{$key}: -#{$value} !important;
+        }
+    }
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+// Opacity
+@for $index from 0 through 100 {
+    .zindex-#{$index} {
+        z-index: $index !important;
+    }
+}

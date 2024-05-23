@@ -1,0 +1,21 @@
+.input-customs {
+    box-shadow: 0px 20px 25px 0px rgb(126 55 216 / 5%) !important;
+    -webkit-box-shadow: 0px 0px 25px 0px rgb(126 55 216 / 5%) !important;
+    border: 1px solid #ececec !important;
+    &.solid-invalid {
+        border: 1px solid #F64E60 !important;
+    }
+    &:focus {
+        border: 1px solid var(--ezs-color) !important;
+    }
+}
+
+.form-group {
+    label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #3f4254;
+        margin-bottom: 2px;
+        line-height: 22px;
+    }
+}

@@ -1,0 +1,50 @@
+//Color App
+$color-app: var(--ezs-color); //(* Bắt buộc ) Màu App
+$color-app-bold: var(--ezs-color-gradient); //(* Bắt buộc ) Màu đậm hơn từ $color-app
+$color-bg-voucher: var(--ezs-color-voucher);
+$color-star: #fcd93a;
+$color-bg-app: #f1f5f8;
+$color-gray-bg: #f0f4f7;
+$color-gray-menu:#bbbbbb;
+$color-gray2-app: #7d7d7d;
+$color-gray-app: #7f8082;
+$color-link-app: #1c3faa;
+$color-price-app: #d0011b;
+$color-primary: #007bff;
+$color-success: #269e41;
+$color-danger: #d0011b;
+$color-danger2: #dc3545;
+$color-warning: #daa810;
+$color-secondary: #6c757d;
+$color-info: #17a2b8;
+$white: #ffffff;
+$black: #000000;
+//Font Family
+$font-app: 'Archivo Narrow',
+sans-serif;
+$font-app2: 'Roboto',
+sans-serif;
+$font-app3: 'Roboto Condensed',
+sans-serif;
+$font-app4: 'Mulish',
+sans-serif;
+.font-app-1 {
+    font-family: $font-app;
+}
+
+//px
+$h-nav: 48px;
+//pading
+$pd-app: 15px;
+//Shadow
+$shadow-menu: 0 3px 20px rgba(0, 0, 0, .04);
+$shadow-box-top: 0 20px 25px -5px rgba(0, 0, 0, .1),
+0 10px 10px -5px rgba(0, 0, 0, .04);
+
+//
+$size-xs: 13px;
+$size-base: 14px;
+$size-medium: 15px;
+$size-lg: 16px;
+$size-xl: 17px;
+$size-xxl: 20px;

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'self' *.trusted.com 'unsafe-inline' 'unsafe-eval' data: gap: content:  blob:">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="theme-color" content="#007aff">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>CSER BEAUTY</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="static/icons/apple-touch-icon.png">
+    <link rel="icon" href="static/icons/favicon.png">
+
+    <script src="https://cser.vn/Admin/ReactCDN/axios.min.js"></script>
+
+    <script>
+        function readTextFile(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+        readTextFile(
+            `${window.location.origin === 'http://localhost:8080' ? "https://cser.vn" : window.location.origin}/brand/global/Global.json?8`,
+            function (result) {
+                var data = JSON.parse(result);
+                if (data && data.APP && data.APP.Css) {
+                    for (const key in data.APP.Css) {
+                        document.documentElement.style.setProperty(key, data.APP.Css[key]);
+                    }
+                }
+                if (data.APP.FontSize && data.APP.FontSize.length > 0) {
+                    for (let key of data.APP.FontSize) {
+                        document.documentElement.style.setProperty(key.name, key.size);
+                    }
+                }
+                window.GlobalConfig = data;
+            });
+    </script>
+
+    <!-- built styles file will be auto injected -->
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="https://cser.vn//App/21/app21.js"></script>
+
+    <!-- built script files will be auto injected -->
+</body>
+
+</html>

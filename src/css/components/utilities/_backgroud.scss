@@ -1,0 +1,48 @@
+
+@each $name,
+$color in $theme-colors {
+    // Base color
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+//
+.bg-stripes {
+    background-image: linear-gradient(
+      45deg,
+      #ddd 25%,
+      transparent 25%,
+      transparent 50%,
+      #ddd 50%,
+      #ddd 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 4px 4px;
+    &.bg-stripes-danger {
+      background-image: linear-gradient(
+        45deg,
+        #F64E60 25%,
+        transparent 25%,
+        transparent 50%,
+        #F64E60 50%,
+        #F64E60 75%,
+        transparent 75%,
+        transparent
+      );
+    }
+  }
+
+.bg-ezs {
+    background-color: $color-app !important;
+}
+
+.Modal-Portal {
+    position: relative;
+    z-index: 100000;
+}

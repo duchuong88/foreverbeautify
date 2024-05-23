@@ -1,0 +1,233 @@
+.page-news {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(241, 245, 248, 1) 100%);
+    &__header {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(flex-end);
+        margin-bottom: 10px;
+        &-date {
+            .date {
+                color: $color-gray-app;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            h3 {
+                margin: 0;
+                font-size: 26px;
+            }
+        }
+        &-user {
+            i {
+                color: $color-app;
+                font-size: 35px;
+            }
+        }
+    }
+    &__dear {
+        background: $white;
+        box-shadow: $shadow-box-top;
+        border-radius: .375rem;
+        overflow: hidden;
+        &-text {
+            padding: 15px;
+            h4 {
+                margin: 0 0 8px 0;
+                font-size: 20px;
+                line-height: 24px;
+                color: $black;
+                text-transform: capitalize;
+            }
+            .desc {
+                color: $color-gray-app;
+                font-size: 14px;
+                line-height: 20px;
+                p {
+                    margin: 0;
+                    @include cut-text;
+                }
+            }
+        }
+    }
+    &__slide {
+        margin-top: 14px;
+        border-radius: .375rem;
+        overflow: hidden;
+        &-item {
+            box-shadow: 0 3px 20px rgba(0, 0, 0, .04);
+            outline: none;
+        }
+        .slick-dots {
+            bottom: 14px;
+            li {
+                margin: 0 3px;
+                width: auto;
+                height: auto;
+                button {
+                    padding: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: $color-app;
+                    opacity: .5;
+                    border-radius: 100%;
+                    @include transition(all .2s linear);
+                    &::before {
+                        display: none;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        opacity: 1;
+                        width: 22px;
+                        border-radius: 25px;
+                    }
+                }
+            }
+        }
+    }
+    &__list {
+        margin-top: 14px;
+        .slick-track {
+            margin: 0 -7px;
+            >div {
+                padding: 0 7px;
+            }
+        }
+        &-head {
+            @include flexbox;
+            @include justify-content(space-between);
+            @include align-items(flex-end);
+            margin-bottom: 14px;
+            h5 {
+                margin: 0;
+                font-size: var(--font-size-xl, $size-lg);
+                text-transform: uppercase;
+                a {
+                    color: #000;
+                    display: inline-block;
+                }
+            }
+            .all {
+                a {
+                    color: $color-link-app;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+            }
+        }
+        &-item {
+            // box-shadow: $shadow-menu;
+            background-color: $white;
+            border-radius: .375rem;
+            display: block !important;
+            .text {
+                padding: 14px;
+                a {
+                    display: block;
+                }
+                h6 {
+                    margin: 0 0 0 0;
+                    font-size: var(--font-size-lg, $size-medium);
+                    color: #000;
+                    font-weight: 600;
+                    @include cut-text-to(2);
+                }
+                .desc {
+                    margin-top: 8px;
+                    color: $color-gray-app;
+                    line-height: 20px;
+                    p {
+                        margin: 0;
+                        @include cut-text-to(2);
+                    }
+                }
+            }
+        }
+    }
+    &__all {
+        margin-top: 0;
+        .page-news__list-item {
+            margin-bottom: 14px;
+        }
+        .page-news__list-item:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__detail {
+        background: $white;
+        &-img {
+            width: 100%;
+        }
+        &-content {
+            margin-top: -25px;
+            position: relative;
+            z-index: 2;
+            padding: $pd-app;
+            p {
+                margin: 0 0 10px 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+            img {
+                object-fit: cover;
+                height: auto !important;
+            }
+        }
+        &-shadow {
+            box-shadow: 10px 0 50px rgba(18, 25, 33, 0.1);
+            padding: $pd-app;
+            text-align: justify;
+            background: $white;
+            line-height: 24px;
+            font-size: var(--font-size-lg, $size-medium);
+            h1, h2, h3, h4, h5 {
+                line-height: 32px;
+            }
+            blockquote {
+                background: #f1f1f1;
+                margin: 0;
+                padding: 10px 15px;
+                border-radius: 3px;
+                margin-bottom: 8px;
+                border-left: 4px solid $color-app;
+                font-weight: 400;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.page-news__list-ul .slick-track {
+    margin: 0 -7px;
+}
+
+.page-news__list-ul .slick-track>div {
+    padding: 0 7px;
+}
+
+.page-news__list-flex {
+    .slick-track {
+        display: flex
+    }
+}
+
+.bd-rd3 {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mb-8 {
+    margin-bottom: 8px !important;
+}
+
+.text-cut-1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.box-shadow-none {
+    box-shadow: none !important;
+}

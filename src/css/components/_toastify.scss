@@ -1,0 +1,7 @@
+
+.Toastify__toast {
+    background-repeat: no-repeat !important;
+    &--success {
+        background: $color-app !important;
+    }
+}

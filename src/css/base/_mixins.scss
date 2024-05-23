@@ -1,0 +1,12 @@
+@mixin createClasses($maps...) {
+    @each $map in $maps {
+        $propertyName: map-get($map, "name");
+        $propertyPrefix: map-get($map, "prefix");
+        @each $value,
+        $key in map-get($map, "values") {
+            .#{$propertyPrefix}#{$value} {
+                #{$propertyName}: #{$key} !important;
+            }
+        }
+    }
+}

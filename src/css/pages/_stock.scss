@@ -1,0 +1,61 @@
+.action-stock {
+    &__list {
+        &-name {
+            position: relative;
+            border-bottom: 1px solid #f1f1f1;
+            background: $white;
+            padding: 12px 0;
+            font-size: var(--font-size-lg, $size-medium);
+            &.title {
+                h5 {
+                    margin: 0;
+                    text-align: center;
+                    font-size: var(--font-size-lg, $size-medium);
+                    text-transform: uppercase
+                }
+            }
+            input {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                margin: 0;
+            }
+            label {
+                text-align: center;
+                display: block;
+                font-size: var(--font-size-base, $size-base);
+                font-weight: 500;
+                i {
+                    margin-left: 4px;
+                    display: none;
+                }
+            }
+            &.currentStock {
+                label {
+                    color: $color-app;
+                    i {
+                        display: inline;
+                    }
+                }
+            }
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+    .actions-group {
+        .actions-button {
+            background: $white;
+            height: 45px;
+            line-height: 45px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .actions-button-text {
+        text-align: center;
+    }
+}

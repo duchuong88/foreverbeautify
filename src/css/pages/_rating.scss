@@ -1,0 +1,85 @@
+.page-rating {
+    padding: 15px;
+    &__list {
+        &-item {
+            margin-bottom: 15px;
+            background: $white;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, .04);
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .rating-header {
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items(center);
+                padding: 10px;
+                border-bottom: 1px solid #edf2f7;
+                &__title {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: $black;
+                    width: calc(100% - 80px);
+                    @include cut-text();
+                }
+                &__user {
+                    .MuiAvatar-root {
+                        width: 25px;
+                        height: 25px;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .rating-content {
+                padding: 10px;
+                text-align: center;
+                .name {
+                    margin-bottom: 8px;
+                    @include flexbox();
+                    @include flex-wrap(wrap);
+                    @include justify-content(center);
+                    span {
+                        position: relative;
+                        padding: 0 5px;
+                        &:before {
+                            content: ",";
+                            position: absolute;
+                            right: 0;
+                        }
+                        &:last-child {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .time {
+                    color: #999999;
+                    font-size: 14px;
+                }
+                .rating {
+                    text-align: center;
+                    i {
+                        font-size: 22px;
+                        color: #e3e3e3;
+                        margin: 0 5px;
+                        &.active {
+                            color: $color-star;
+                        }
+                    }
+                    .star_icon {
+                        svg {
+                            width: 50px;
+                            height: 50px;
+                            margin: 10px 0;
+                            &.rating-0 {
+                                -webkit-filter: grayscale(100%);
+                                filter: grayscale(100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

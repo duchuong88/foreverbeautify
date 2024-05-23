@@ -1,0 +1,28 @@
+.page-toolbar {
+    width: 100%;
+    height: 100%;
+    &__list {
+        @include flexbox;
+        height: 100%;
+        li {
+            a {
+                span {
+                    font-size: 12px;
+                    margin: 2px 0 0 0;
+                }
+                i {
+                    font-size: 22px;
+                }
+            }
+        }
+        &.toolbar-item-4 {
+            li {
+                @include flex-width(25%);
+            }
+        }
+    }
+}
+
+.toolbar .page-toolbar a.link {
+    color: $color-gray2-app;
+}

@@ -1,0 +1,112 @@
+.diary {
+    &-box {
+        padding: 15px;
+        &__list {
+            &-item {
+                h4 {
+                    margin: 0;
+                    font-family: $font-app;
+                    color: #7b7b7b;
+                    font-size: 15px;
+                    font-weight: 500;
+                    span {
+                        &:first-child {
+                            font-size: 18px;
+                            color: #343951;
+                            margin-right: 8px;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+                ul {
+                    position: relative;
+                    padding-left: 20px;
+                    margin: 20px 0;
+                    li {
+                        position: relative;
+                        margin-bottom: 15px;
+                        @include flexbox;
+                        @include align-items(center);
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 1px;
+                            height: calc(100% + 15px);
+                            background: #dbdeea;
+                            top: 50%;
+                            left: -7px;
+                        }
+                        .icon {
+                            position: absolute;
+                            left: -13px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            span {
+                                border: 2px solid #dbdeea;
+                                background: $white;
+                                width: 13px;
+                                height: 13px;
+                                display: block;
+                                border-radius: 100%;
+                                box-sizing: border-box;
+                            }
+                        }
+                        .time {
+                            width: 70px;
+                            line-height: 22px;
+                            text-align: center;
+                            font-family: $font-app;
+                            color: #9ea1ab;
+                            font-size: 16px;
+                        }
+                        .text {
+                            max-width: calc(100% - 70px);
+                            padding: 12px;
+                            border-radius: 4px;
+                            color: $white;
+                            font-size: 15px;
+                            word-break: break-all;
+                            box-sizing: border-box;
+                            background: #7acbbd;
+                            box-shadow: 0 3px 20px rgba(122, 203, 189, .4);
+                            p {
+                                margin: 0;
+                            }
+                        }
+                        &:nth-child(n+2) {
+                            .text {
+                                background: #ffb72b;
+                                box-shadow: 0 3px 20px rgba(255, 183, 43, .4);
+                            }
+                        }
+                        &:nth-child(n+3) {
+                            .text {
+                                background: #865fc1;
+                                box-shadow: 0 3px 20px rgba(134, 95, 193, .4);
+                            }
+                        }
+                        &:nth-child(n+4) {
+                            .text {
+                                background: #eb4986;
+                                box-shadow: 0 3px 20px rgba(253, 78, 145, 0.4);
+                            }
+                        }
+                        &:last-child {
+                            padding-bottom: 0;
+                            &:before {
+                                display: none;
+                            }
+                        }
+                        img {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            max-height: max-content !important;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

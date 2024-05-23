@@ -1,0 +1,566 @@
+/* Your app custom styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Barlow:wght@200;300;400;500;600;700&family=Archivo+Narrow:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700&family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+////////// abstracts
+@import './abstracts/variables';
+@import './components/variables';
+@import './../css/abstracts/mixins';
+@import './plugins/mixins/perfect-scrollbar';
+////////// base
+@import './base/reset',
+"./base/mixins";
+//
+@import './components/utilities/sizing',
+'./components/utilities/text',
+"./components/utilities/backgroud",
+"./components/utilities/spacing",
+"./components/utilities/border",
+"./components/utilities/d-flex",
+"./components/utilities/shadows",
+"./components/utilities/position";
+///
+@import './base/input';
+@import './../css/components/toastify';
+@import '../css/components/loading',
+'./components/panel',
+"./components/button",
+'./components/svg',
+'./components/sheet',
+"./components/react-select",
+'./plugins/perfect-scrollbar';
+////////// layout
+@import './../css/layout/iconanimation';
+@import './../css/layout/button';
+@import './../css/layout/navbar';
+@import './../css/layout/toolbar';
+@import './../css/layout/toolbarCustom';
+@import './../css/layout/toolbarBottom';
+@import './../css/layout/modal.scss';
+// @import './plugins/animate.min.css';
+////////// pages
+//home
+@import './../css/pages/home/index.scss';
+@import './../css/pages/employee/index.scss';
+@import './../css/pages/nodata.scss';
+@import './../css/pages/news.scss';
+@import './../css/pages/shop.scss';
+@import './../css/pages/maps.scss';
+@import './../css/pages/login.scss';
+@import './../css/pages/profile.scss';
+@import './../css/pages/cardservice.scss';
+@import './../css/pages/barcode.scss';
+@import './../css/pages/stock.scss';
+@import './../css/pages/schedule.scss';
+@import './../css/pages/voucher.scss';
+@import './../css/pages/wallet.scss';
+@import './../css/pages/diary.scss';
+@import './../css/pages/rating.scss';
+@import './../css/pages/notification.scss';
+@import './../css/pages/order.scss';
+@import './../css/pages/pay.scss';
+@import './../css/pages/search/index.scss';
+@import './../css/pages/quickaction/index';
+@import './../css/pages/forgot',
+'./pages/report';
+
+:root {
+    --f7-font-size: var(--font-size-base, 14px);
+    --ReactInputVerificationCode-itemWidth: 55px !important;
+    --ReactInputVerificationCode-itemHeight: 55px !important;
+    --ReactInputVerificationCode-itemSpacing: 12px !important;	
+}
+.ios {
+    --f7-toolbar-height: 48px;
+    --f7-navbar-height: 48px;
+    
+}
+
+//Font family
+body,
+html {
+    font-family: $font-app2 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.no-bg {
+    background: transparent !important;
+}
+
+.bg-white_>div {
+    background: #fff !important;
+}
+
+.bg-white>.page-content {
+    background: #fff !important;
+}
+
+.content_ p:first-child {
+    margin-top: 0 !important
+}
+
+.content_ p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.action-stock .actions-group:first-child {
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+}
+
+.h-auto {
+    height: auto !important;
+}
+
+.bs-bb {
+    box-sizing: border-box;
+}
+
+.navbar-no-line .navbar-bg {
+    border-bottom: 0;
+}
+
+.ScrollbarsCustom-Track,
+.ScrollbarsCustom-Thumb {
+    display: none !important;
+}
+
+.ScrollbarsCustom-Wrapper {
+    height: 100%;
+}
+
+.ScrollbarsCustom-Scroller {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.ReactInputVerificationCode__item.is-active {
+    box-shadow: inset 0 0 0 2px var(--ezs-color) !important;
+}
+
+.login-screen .login-screen-page .login-screen-content {
+    margin: 0 !important;
+    height: 100% !important;
+}
+
+//Reset Framework7
+.page-content {
+    background: $color-gray-bg;
+}
+
+.toolbar {
+    padding: 0;
+    background: $white;
+    box-shadow: $shadow-box-top;
+    &-inner {
+        padding: 0;
+    }
+    &:before {
+        height: 0;
+    }
+}
+
+.ios-translucent-bars .toolbar {
+    background: $white;
+    box-shadow: $shadow-menu;
+}
+
+.ios-translucent-bars .photo-browser-page-dark .toolbar {
+    background: var(--f7-photobrowser-dark-bars-bg-color);
+}
+
+.navbar {
+    &-bg {
+        background: $color-app;
+        border-bottom: solid 2px rgba(255, 255, 255, 0.3);
+        &:after {
+            background-color: transparent;
+        }
+    }
+    &:not(.navbar-photo-browser.navbar-photo-browser-dark) {
+        .navbar-inner {
+            padding: 0;
+        }
+    }
+}
+
+.navbars .navbar.navbar-current {
+    z-index: 10;
+}
+
+.navbars .navbar.navbar-previous .page-navbar__back a.link {
+    opacity: 0;
+}
+
+.ios-translucent-bars .navbar-bg {
+    background-color: $color-app;
+}
+
+.searchbar-product {
+    background: var(--f7-navbar-bg-color) !important;
+    background-image: var(--f7-navbar-bg-image, var(--f7-bars-bg-image))!important;
+    background-color: var(--f7-navbar-bg-color, var(--f7-bars-bg-color))!important;
+}
+
+.toolbar .toolbar-inner {
+    overflow: inherit;
+}
+
+//Slick
+.slick-slide {
+    height: auto !important;
+}
+
+//rootnotify reset
+.Toastify__close-button {
+    width: auto!important;
+}
+
+.Toastify__toast-container {
+    z-index: 99999 !important;
+}
+
+//Component
+.page-render {
+    padding: $pd-app;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.text-empty {
+    padding: 15px;
+}
+
+.text-red {
+    color: $color-price-app !important;
+}
+
+.login-screen .login-screen-page > .login-screen-content {
+    height: 100%;
+}
+
+// badges
+.badges {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+.badges-danger {
+    color: #fff;
+    background-color: #f54242;
+}
+
+///datepicker mobile
+.datepicker {
+    font-family: $font-app !important;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.datepicker-modal {
+    z-index: 10001 !important;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.datepicker.ios .datepicker-header {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.ios .with-photo-browser-page .icon-back:after {
+    font-size: 14px;
+}
+
+.ios .with-photo-browser-page .back span {
+    font-size: 16px;
+}
+
+.d-block {
+    display: block !important;
+}
+
+blockquote {
+    background: #f1f1f1;
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    border-left: 4px solid $color-app;
+    font-weight: 400;
+    font-style: italic;
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.mt-12px {
+    margin-top: 12px !important;
+}
+
+.pl-15px {
+    padding-left: 15px;
+}
+
+.pr-15px {
+    padding-right: 15px;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.sheet-icon-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 35px;
+    height: 32px;
+    font-size: 25px;
+    color: #000;
+}
+
+.ribbon-new {
+    background: #1BC5BD;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 8px), 0 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 6px 12px;
+    font-size: 13px;
+    -webkit-box-shadow: 0px 10px 30px 0px rgb(82 63 105 / 8%);
+    box-shadow: 0px 10px 30px 0px rgb(82 63 105 / 8%);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.ribbon-hot {
+    position: absolute;
+    top: 0;
+    left: -3px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    padding: 0 5px;
+    border-top-right-radius: 0.125rem;
+    border-bottom-right-radius: 0.125rem;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    pointer-events: none;
+    img {
+        width: 40px;
+    }
+    // &::before {
+    //     content: "";
+    //     display: inline-block;
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: -0.1875rem;
+    //     border-top: 0.1875rem solid;
+    //     border-left: 0.1875rem solid transparent;
+    //     -webkit-filter: brightness(60%);
+    //     filter: brightness(60%);
+    // }
+}
+
+.ribbon-sale {
+    position: absolute;
+    background: #F64E60;
+    color: white;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    transform: rotate(-20deg);
+    -webkit-animation: beat 1s ease infinite alternate;
+    animation: beat 1s ease infinite alternate;
+    pointer-events: none;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: inherit;
+        height: inherit;
+        width: inherit;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: rotate(30deg);
+    }
+    &::after {
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes beat {
+    from {
+        transform: rotate(-20deg) scale(1);
+    }
+    to {
+        transform: rotate(-20deg) scale(1.1);
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.list-em-history {
+    .item {
+        position: relative;
+        padding-bottom: 1.5rem;
+        border-left: 1px solid #abaaed;
+        position: relative;
+        padding-left: 20px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: white;
+            border: 1px solid #4e5ed3;
+            box-shadow: 2px 2px 0px #bab5f8;
+            box-shadow: 2px 2px 0px #bab5f8;
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+            top: 0px;
+        }
+        .item-lst {
+            margin-top: 8px;
+            .item-lst_sub {
+                box-shadow: 0px 9px 30px rgb(51 83 145 / 8%) !important;
+                background: #fff;
+                padding: 12px;
+                border-radius: 0.25rem;
+                margin-top: 8px;
+                .time {
+                    color: #7e8299;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+                .service-name {
+                    margin: 3px 0;
+                }
+                i {
+                    color: #6d6d6d;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+.photo-browser-page {
+    .title {
+        color: #fff;
+    }
+    .right {
+        padding-right: 10px;
+        a {
+            color: #fff;
+        }
+    }
+}
+
+body {
+    .select__control {
+        border-color: #E4E6EF;
+    }
+    .select__menu {
+        border: 0;
+        -webkit-box-shadow: 0px 0px 50px 0px rgb(82 63 105 / 15%);
+        box-shadow: 0px 0px 50px 0px rgb(82 63 105 / 15%);
+        margin-bottom: 3px;
+        margin-top: 3px;
+        .select__option {
+            padding: 5px 12px;
+            font-weight: 500;
+            text-transform: capitalize;
+            &.select__option--is-focused,
+            &.select__option--is-selected {
+                background: var(--ezs-color);
+                color: #fff;
+            }
+        }
+    }
+    .select__single-value {
+        color: #000;
+        font-weight: 500;
+        text-align: left;
+    }
+    .select__menu-list {
+        max-height: 150px;
+    }
+}
+
+.children-p-0 {
+    p {
+        margin: 0;
+    }
+}
+
+.z-20.navbar-current {
+    z-index: 20 !important;
+}
