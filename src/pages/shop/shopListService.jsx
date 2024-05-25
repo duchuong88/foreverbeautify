@@ -322,7 +322,7 @@ export default class extends React.Component {
                                   }
                                   className="_btn"
                                 >
-                                  Booking Now
+                                  Book Now
                                 </Link>
                               </div>
                               <div
