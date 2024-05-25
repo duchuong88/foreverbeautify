@@ -90,9 +90,14 @@ export default class extends React.Component {
     const CateID = id || this.$f7route.params.cateId;
     ShopDataService.getTitleCate(CateID)
       .then((response) => {
-        const titlePage = response.data.data[0].Title;
+        let {Title, ID} = response.data.data[0]
+        let newTitle = Title
+        if(ID === 795) {
+          newTitle = "Services"
+        }
+
         this.setState({
-          titlePage: titlePage,
+          titlePage: newTitle,
         });
       })
       .catch((e) => {

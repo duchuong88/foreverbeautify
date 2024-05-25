@@ -18,7 +18,7 @@ import { toast } from "react-toastify";
 import PickerVerify from "./PickerVerify";
 import DeviceHelpers from "../../../constants/DeviceHelpers";
 
-const phoneRegExp = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+const phoneRegExp = /\+65(6|8|9)\d{7}/g;
 
 const regSchema = Yup.object().shape({
   fullname: Yup.string().min(4, "Full name must have at least 4 characters.").required("Please enter your full name."),
@@ -283,9 +283,10 @@ function FormRegistration({ f7, f7router, openSelectStock }) {
                       thousandSeparator={false}
                       placeholder="Phone number"
                       onValueChange={(val) => {
-                        setFieldValue("phone", val.value);
+                        setFieldValue("phone", val.formattedValue);
                       }}
                       allowLeadingZeros
+                      prefix={"+65"}
                     />
                   </div>
                   {errors.phone && touched.phone && (

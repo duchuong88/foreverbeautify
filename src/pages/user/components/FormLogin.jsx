@@ -20,6 +20,7 @@ import { ref, set } from "firebase/database";
 import { database } from "../../../firebase/firebase";
 import DeviceHelpers from "../../../constants/DeviceHelpers";
 import { checkDevices, iOS } from "../../../constants/helpers";
+import NumberFormat from "react-number-format";
 
 const loginSchema = Yup.object().shape({
   username: Yup.string()
@@ -230,20 +231,24 @@ function FormLogin({ f7, f7router }) {
             <div className="title">Log in to your account</div>
             <div className="page-login__form-item">
               <div className="position-relative">
-                <input
+                <NumberFormat
                   className={clsx(
                     "input-customs",
                     errors.username &&
                       touched.username &&
                       "is-invalid solid-invalid"
                   )}
-                  type="text"
+                  // thousandSeparator={true}
+                  // thousandsGroupStyle="lakh"
+                  prefix={"+65"}
                   value={values.username}
+                  placeholder="Phone number"
+                  onValueChange={({ formattedValue }) => {
+                    setFieldValue("username", formattedValue);
+                  }}
+                  onBlur={handleBlur}
                   name="username"
                   autoComplete="off"
-                  placeholder="Account name or Phone number"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
                 />
                 {values.username && (
                   <div
