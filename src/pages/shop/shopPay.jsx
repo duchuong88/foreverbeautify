@@ -666,11 +666,11 @@ export default class extends React.Component {
                           >
                             <p className="price-p">
                               {formatPriceVietnamese(item.Price)}
-                              <b>₫</b>
+                              <b>sgd</b>
                             </p>
                             <p className="price-s">
                               {formatPriceVietnamese(item.PriceOrder)}
-                              <b>₫</b>
+                              <b>sgd</b>
                             </p>
                           </div>
                           <div className="qty-form">
@@ -823,7 +823,7 @@ export default class extends React.Component {
                     Total money :
                     <span>
                       {formatPriceVietnamese(TotalOrder)}
-                      <b>SGD</b>
+                      <b>sgd</b>
                     </span>
                   </div>
                   <div className="btns">
@@ -903,14 +903,14 @@ export default class extends React.Component {
                     >
                       <div className="coupon">
                         <div className="coupon-title">
-                          Mã <span>{item.Code}</span>
+                          Code <span>{item.Code}</span>
                         </div>
                         <div className="coupon-value">
                           {item?.ValueType === 2 ? (
                             <>
                               Same price{" "}
                               <span>
-                                {formatPriceVietnamese(item.Discount)} VND
+                                {formatPriceVietnamese(item.Discount)} SGD
                               </span>
                             </>
                           ) : (
@@ -920,7 +920,7 @@ export default class extends React.Component {
                                 {item.Discount > 100
                                   ? `${formatPriceVietnamese(
                                       item.Discount
-                                    )} SGD`
+                                    )} sgd`
                                   : `${item.Discount} %`}
                               </span>
                             </>
@@ -970,7 +970,7 @@ export default class extends React.Component {
               Your wallet balance :{" "}
               <span>
                 {formatPriceVietnamese(WalletMe)}
-                <b>SGD</b>
+                <b>sgd</b>
               </span>
             </div>
             {WalletMe <= 0 && (

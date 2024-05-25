@@ -325,11 +325,11 @@ export default class extends React.Component {
                     >
                       <span className="price">
                         {formatPriceVietnamese(item.PriceProduct)}
-                        <b>₫</b>
+                        <b>sgd</b>
                       </span>
                       <span className="price-sale">
                         {formatPriceVietnamese(item.PriceSale)}
-                        <b>₫</b>
+                        <b>sgd</b>
                       </span>
                     </div>
                     <div className="option-btn">Buy Now</div>
@@ -547,7 +547,7 @@ export default class extends React.Component {
                                 arrProductCurrent.PriceProduct
                               )
                             : "..."}
-                          <b>₫</b>
+                          <b>sgd</b>
                         </React.Fragment>
                       )}
                       {arrProductCurrent.IsDisplayPrice !== 1 && (
@@ -569,7 +569,7 @@ export default class extends React.Component {
                       </div>
                       <div className="text">
                         {formatPriceVietnamese(arrProduct.PriceSale)}
-                        <b>SGD</b>
+                        <b>sgd</b>
                       </div>
                     </li>
                   )}
@@ -790,11 +790,11 @@ export default class extends React.Component {
                       <React.Fragment>
                         <p className="price-p">
                           {formatPriceVietnamese(arrProduct.PriceProduct)}
-                          <b>₫</b>
+                          <b>sgd</b>
                         </p>
                         <p className="price-s">
                           {formatPriceVietnamese(arrProduct.PriceSale)}
-                          <b>₫</b>
+                          <b>sgd</b>
                         </p>
                       </React.Fragment>
                     ) : (
@@ -893,11 +893,11 @@ export default class extends React.Component {
                           >
                             <span className="price">
                               {formatPriceVietnamese(item.PriceProduct)}
-                              <b>₫</b>
+                              <b>sgd</b>
                             </span>
                             <span className="price-sale">
                               {formatPriceVietnamese(item.PriceSale)}
-                              <b>₫</b>
+                              <b>sgd</b>
                             </span>
                           </div>
                           <div className="option-btn">Buy Now</div>

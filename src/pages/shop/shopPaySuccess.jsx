@@ -169,7 +169,7 @@ export default class extends React.Component {
                     "MONEY",
                     `<b class="fw-600 text-danger">${formatPriceVietnamese(
                       Math.abs(this.$f7route.query.money)
-                    )} ₫</b>`
+                    )} sgd</b>`
                   )
                   .replaceAll("ID_DH", `${this.$f7route.params.orderID}`)
               )}

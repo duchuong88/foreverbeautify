@@ -213,7 +213,7 @@ export default class extends React.Component {
                             <div className="info-price">
                               <p className="price-p">
                                 {formatPriceVietnamese(item.ToPay)}
-                                <b>SGD</b>
+                                <b>sgd</b>
                               </p>
                               <p className="qty">x{item.Qty}</p>
                             </div>
@@ -351,7 +351,7 @@ export default class extends React.Component {
                       {formatPriceVietnamese(
                         order && Math.abs(order.RemainPay)
                       )}
-                      <b>SGD</b>
+                      <b>sgd</b>
                     </span>
                   </div>
                   <div className="btns">

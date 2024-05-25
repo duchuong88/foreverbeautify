@@ -410,7 +410,7 @@ export default class extends React.Component {
                         <span>Total order :</span>
                         <span className="price text-red">
                           {formatPriceVietnamese(item.ToPay)}
-                          <b>SGD</b>
+                          <b>sgd</b>
                         </span>
                       </div>
                       {item.Status !== "cancel" && (
@@ -418,7 +418,7 @@ export default class extends React.Component {
                           {/* <span>Đã thanh toán :</span>
                           <span className="price">
                             {formatPriceVietnamese(item.Payed)}
-                            <b>₫</b>
+                            <b>sgd</b>
                           </span> */}
                           {item.Status === "finish" && (
                             <React.Fragment>
@@ -508,7 +508,7 @@ export default class extends React.Component {
                                     {formatPriceVietnamese(
                                       Math.abs(item.thanhtoan.thanh_toan_ao)
                                     )}
-                                    <b>₫</b>
+                                    <b>sgd</b>
                                   </span>
                                 </React.Fragment>
                               )} */}
