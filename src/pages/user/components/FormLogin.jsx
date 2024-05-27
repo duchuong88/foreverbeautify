@@ -232,6 +232,7 @@ function FormLogin({ f7, f7router }) {
             <div className="page-login__form-item">
               <div className="position-relative">
                 <NumberFormat
+                  allowLeadingZeros={true}
                   className={clsx(
                     "input-customs",
                     errors.username &&
@@ -240,11 +241,11 @@ function FormLogin({ f7, f7router }) {
                   )}
                   // thousandSeparator={true}
                   // thousandsGroupStyle="lakh"
-                  prefix={"+65"}
+                  //prefix={"+65"}
                   value={values.username}
                   placeholder="Phone number"
-                  onValueChange={({ formattedValue }) => {
-                    setFieldValue("username", formattedValue);
+                  onValueChange={({ value }) => {
+                    setFieldValue("username", value);
                   }}
                   onBlur={handleBlur}
                   name="username"
@@ -338,11 +339,11 @@ function FormLogin({ f7, f7router }) {
                       : "jc--c"
                   )}
                 >
-                  {!window?.GlobalConfig?.APP?.OnlyStaff && (
+                   {/* {!window?.GlobalConfig?.APP?.OnlyStaff && (
                     <div>
                       <Link href="/forgot/">Forgot password?</Link>
                     </div>
-                  )}
+                  )}*/}
                   {window?.GlobalConfig?.SMSOTP && (
                     <div>
                       <Link href="/login-otp/">Sign in with SMS</Link>

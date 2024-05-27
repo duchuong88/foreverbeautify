@@ -1,6 +1,8 @@
 import { Link } from "framework7-react";
 import React from "react";
 import { FaWhatsapp, FaFacebookMessenger } from "react-icons/fa";
+import { MdOutlineWifiCalling3 } from "react-icons/md";
+
 import { CALL_PHONE, OPEN_LINK } from "../../constants/prom21";
 import userService from "../../service/user.service";
 import { iOS } from "./../../constants/helpers";
@@ -66,7 +68,7 @@ export default class quickAction extends React.Component {
                   src={SERVER_APP + "/app2021/images/icon-social/phone.png"}
                 />
               ) : (
-                <FaWhatsapp />
+                <MdOutlineWifiCalling3 />
               )}
             </div>
           )}
@@ -89,25 +91,26 @@ export default class quickAction extends React.Component {
           {zalo && (
             <>
               {iOS() ? (
-                <Link external href={zalo} noLinkClass className="item">
-                  <img
-                    src={SERVER_APP + ZaloIcon}
-                    style={{ borderRadius: "100%" }}
-                  />
+                <Link
+                  external
+                  href={zalo}
+                  noLinkClass
+                  className="item"
+                  style={{
+                    background: "#25d366",
+                  }}
+                >
+                  <FaWhatsapp />
                 </Link>
               ) : (
-                <div className="item" onClick={() => this.handleLink(zalo)}>
-                  {window?.GlobalConfig?.APP?.isIconSocial ? (
-                    <img
-                      className="icon-social w-100 h-100 rounded-circle"
-                      src={SERVER_APP + "/app2021/images/icon-social/zalo.png"}
-                    />
-                  ) : (
-                    <img
-                      src={SERVER_APP + ZaloIcon}
-                      style={{ borderRadius: "100%" }}
-                    />
-                  )}
+                <div
+                  className="item"
+                  onClick={() => this.handleLink(zalo)}
+                  style={{
+                    background: "#25d366",
+                  }}
+                >
+                  <FaWhatsapp />
                 </div>
               )}
             </>

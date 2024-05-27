@@ -21,17 +21,17 @@ import DeviceHelpers from "../../../constants/DeviceHelpers";
 const phoneRegExp = /\+65(6|8|9)\d{7}/g;
 
 const regSchema = Yup.object().shape({
-  fullname: Yup.string().min(4, "Full name must have at least 4 characters.").required("Please enter your full name."),
+  fullname: Yup.string()
+    .min(4, "Full name must have at least 4 characters.")
+    .required("Please enter your full name."),
   password: Yup.string()
     .min(4, "Password must have at least 4 characters.")
     .required("Please enter a password."),
-  phone: Yup.string()
-    .required("Please enter the phone number.")
-    .matches(phoneRegExp, "Invalid phone number."),
+  phone: Yup.string().required("Please enter the phone number."),
+  //.matches(phoneRegExp, "Invalid phone number."),
 });
 
 function FormRegistration({ f7, f7router, openSelectStock }) {
-  
   const [initialValues] = useState({
     fullname: "",
     password: "",
@@ -271,6 +271,7 @@ function FormRegistration({ f7, f7router, openSelectStock }) {
                 <div className="page-login__form-item">
                   <div>
                     <NumberFormat
+                      allowLeadingZeros={true}
                       autoComplete="off"
                       name="phone"
                       className={clsx(
@@ -283,10 +284,10 @@ function FormRegistration({ f7, f7router, openSelectStock }) {
                       thousandSeparator={false}
                       placeholder="Phone number"
                       onValueChange={(val) => {
-                        setFieldValue("phone", val.formattedValue);
+                        setFieldValue("phone", val.value);
                       }}
-                      allowLeadingZeros
-                      prefix={"+65"}
+
+                      //prefix={"+65"}
                     />
                   </div>
                   {errors.phone && touched.phone && (
