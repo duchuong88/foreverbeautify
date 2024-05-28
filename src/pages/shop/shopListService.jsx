@@ -367,7 +367,7 @@ export default class extends React.Component {
                                   <PickerDetail item={item}>
                                     {({ open }) => (
                                       <Button fill className="show-more" onClick={open}>
-                                        Chi tiết{" "}
+                                        Detail{" "}
                                         <i className="las la-angle-right"></i>
                                       </Button>
                                     )}
