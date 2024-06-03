@@ -78,7 +78,7 @@ export default class ListImage extends React.Component {
     if (arrPhotoCustomer && arrPhotoCustomer.length > 0) {
       return (
         <div className="home-page__client">
-          <div className="title">Ảnh khách hàng</div>
+          <div className="title">Customer photo</div>
           {!isLoading && (
             <React.Fragment>
               <div className="box">
